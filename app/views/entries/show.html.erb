@@ -6,7 +6,10 @@
   <div class="column is-one-third">
     <nav class="panel is-link">
       <p class="panel-heading">
-        <%= @entry.meal_type %> 
+        <%= @entry.meal_type %>
+        <% if @entry.category.present? %>
+         - <%= @entry.category.title %> 
+        <% end %>
       </p>
 
       <div class="panel-block">
